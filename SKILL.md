@@ -64,7 +64,8 @@ Narrator rules:
 
 - Load the selected role card from `references/character-library/<role-id>.md`.
 - If the role card lists reference images under `assets/characters/<role-id>/`, include those paths in the prompt as loose visual guidance.
-- Preserve only the role's key identity markers, such as hair, glasses, clothing, posture, or signature props.
+- For `role-01`, use the bundled PNG images as the canonical Xiaoliang reference. Preserve the blue shirt, black spiky hair, round eyes, tan face, and rough black outline shown in those PNGs. Do not substitute glasses, black hoodie, dark jacket, or a different narrator design.
+- Preserve only the role's key identity markers, such as hair, eyes, clothing, posture, color palette, or signature props.
 - The narrator may appear as an observer, operator, confused participant, explainer, or person being overwhelmed by the article topic.
 - Do not force the narrator into every image. Use them only when they improve the scene.
 - Keep the narrator ugly, mouse-drawn, inconsistent, and subordinate to the failed-redraw style. Do not turn them into a polished character sheet.

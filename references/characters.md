@@ -38,10 +38,12 @@ If the role card lists bundled reference images under `assets/characters/<role-i
 Rules:
 
 - Preserve only the core identity markers from the role card.
+- For role-01, the bundled PNG files are canonical. Use the blue-shirt, black-spiky-hair Xiaoliang from those PNGs, not a newly invented narrator design.
 - The narrator can be a viewer, operator, confused participant, author avatar, or person being overwhelmed by the article topic.
 - The narrator does not need to appear in every image.
 - The narrator must remain in the awful MS Paint failed-redraw style.
 - Do not make the narrator cute, polished, consistent like a model sheet, or more important than the article scene.
+- Do not silently reuse a narrator in `none` mode. The blue-shirt Xiaoliang is allowed only when narrator role-01 is selected.
 
 Prompt line:
 

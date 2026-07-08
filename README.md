@@ -42,9 +42,13 @@ Skill 支持两种角色模式：
 references/character-library/
   role-01.md
   role-02.md
+assets/characters/role-01/
+  xiaoliang-reference-01.svg
+  xiaoliang-reference-02.svg
+  xiaoliang-reference-03.svg
 ```
 
-用户可以把 `role-01.md` 或 `role-02.md` 改成自己的原创/授权角色卡。使用时可以说：
+`role-01` 默认是“小亮”形象，并带有三张 SVG 参考图。用户可以把 `role-01.md`、`role-02.md` 或对应图片换成自己的原创/授权角色卡。使用时可以说：
 
 ```text
 用 awful-article-picture 给这篇文章配图，角色模式 none。
@@ -94,6 +98,9 @@ agents/openai.yaml
 references/characters.md
 references/character-library/role-01.md
 references/character-library/role-02.md
+assets/characters/role-01/xiaoliang-reference-01.svg
+assets/characters/role-01/xiaoliang-reference-02.svg
+assets/characters/role-01/xiaoliang-reference-03.svg
 references/style.md
 references/prompt_examples.md
 ```
@@ -140,9 +147,13 @@ The character library lives here:
 references/character-library/
   role-01.md
   role-02.md
+assets/characters/role-01/
+  xiaoliang-reference-01.svg
+  xiaoliang-reference-02.svg
+  xiaoliang-reference-03.svg
 ```
 
-Users can replace `role-01.md` or `role-02.md` with their own original or authorized character card. Example usage:
+`role-01` is the bundled Xiaoliang narrator and includes three SVG reference images. Users can replace `role-01.md`, `role-02.md`, or their corresponding reference images with their own original or authorized character card. Example usage:
 
 ```text
 Use $awful-article-picture to illustrate this article with character mode none.
@@ -180,6 +191,9 @@ agents/openai.yaml
 references/characters.md
 references/character-library/role-01.md
 references/character-library/role-02.md
+assets/characters/role-01/xiaoliang-reference-01.svg
+assets/characters/role-01/xiaoliang-reference-02.svg
+assets/characters/role-01/xiaoliang-reference-03.svg
 references/style.md
 references/prompt_examples.md
 ```

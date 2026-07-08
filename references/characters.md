@@ -33,6 +33,8 @@ Supported role ids:
 
 Load the selected file from `references/character-library/`.
 
+If the role card lists bundled reference images under `assets/characters/<role-id>/`, use them as loose identity guidance. Preserve only the core markers; do not trace the images exactly.
+
 Rules:
 
 - Preserve only the core identity markers from the role card.
@@ -46,6 +48,7 @@ Prompt line:
 ```text
 Character mode: narrator
 Narrator role: <role-id>; preserve these key markers: <paste key markers from role card>.
+Reference images: <list bundled image paths if the role card provides them>.
 Character placement: Use the narrator only when they help the scene; otherwise keep the scene focused on the article beat.
 ```
 

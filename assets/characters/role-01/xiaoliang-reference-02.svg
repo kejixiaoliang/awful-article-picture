@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <g stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 160 L148 107 L185 144 L226 102 L250 162 L295 146 L275 208 L320 231 L252 236 L219 285 L168 250 L115 270 L132 210 L82 184 Z" fill="#141820"/>
+    <path d="M123 216 C125 135 283 132 286 219 C289 295 244 346 201 350 C153 354 116 294 123 216 Z" fill="#f1cda9"/>
+    <circle cx="172" cy="240" r="29" fill="#ffffff"/>
+    <circle cx="237" cy="238" r="29" fill="#ffffff"/>
+    <path d="M202 240 L208 242"/>
+    <circle cx="174" cy="244" r="5" fill="#111111"/>
+    <circle cx="239" cy="242" r="5" fill="#111111"/>
+    <path d="M178 311 C199 292 229 292 250 311" fill="none"/>
+    <path d="M167 372 L259 361 L306 555 L115 560 Z" fill="#202836"/>
+    <path d="M192 406 L193 523 M246 401 L255 522" stroke="#eeeeee" stroke-width="4"/>
+    <path d="M83 425 L34 387 L55 361 L117 407 Z" fill="#eeeeee"/>
+    <path d="M315 421 L381 388 L398 421 L325 466 Z" fill="#eeeeee"/>
+    <path d="M392 146 L426 105 L461 139 L496 105 L518 154 L558 142 L540 195 L582 219 L522 221 L489 263 L446 237 L398 255 L413 199 L370 174 Z" fill="#141820"/>
+    <path d="M397 198 C400 130 543 128 545 201 C548 269 507 315 469 318 C429 321 392 262 397 198 Z" fill="#f1cda9"/>
+    <circle cx="439" cy="220" r="26" fill="#ffffff"/>
+    <circle cx="497" cy="219" r="26" fill="#ffffff"/>
+    <circle cx="440" cy="222" r="5" fill="#111111"/>
+    <circle cx="497" cy="221" r="5" fill="#111111"/>
+    <path d="M448 283 C470 290 494 288 512 279" fill="none"/>
+    <path d="M415 340 L511 330 L562 520 L371 525 Z" fill="#202836"/>
+    <path d="M325 387 L402 347 L414 382 L340 434 Z" fill="#eeeeee"/>
+    <path d="M556 375 L642 375 L644 422 L558 421 Z" fill="#f3df6f"/>
+    <path d="M710 142 L746 101 L781 139 L820 100 L839 156 L882 142 L861 198 L904 221 L842 225 L807 266 L762 240 L716 258 L731 202 L688 174 Z" fill="#141820"/>
+    <path d="M715 199 C718 129 862 128 864 202 C867 270 827 316 787 319 C746 322 710 263 715 199 Z" fill="#f1cda9"/>
+    <circle cx="757" cy="220" r="26" fill="#ffffff"/>
+    <circle cx="816" cy="220" r="26" fill="#ffffff"/>
+    <circle cx="757" cy="222" r="5" fill="#111111"/>
+    <circle cx="816" cy="222" r="5" fill="#111111"/>
+    <path d="M761 286 L824 286" fill="none"/>
+    <path d="M733 340 L829 329 L893 535 L670 543 Z" fill="#202836"/>
+    <path d="M661 382 L728 350 L745 389 L676 429 Z" fill="#eeeeee"/>
+    <path d="M878 373 C943 371 973 412 962 461" fill="none"/>
+    <path d="M956 463 L1017 445 L1033 500 L967 516 Z" fill="#b7d7ff"/>
+    <path d="M125 593 L1045 584" fill="none" stroke-width="3"/>
+    <text x="155" y="625" font-family="Arial, sans-serif" font-size="28" fill="#111111" stroke="none">confused / excited / quietly panicking - redraw badly, keep only key markers</text>
+  </g>
+</svg>

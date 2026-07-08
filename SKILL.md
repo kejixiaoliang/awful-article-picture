@@ -63,6 +63,7 @@ Use only these two modes:
 Narrator rules:
 
 - Load the selected role card from `references/character-library/<role-id>.md`.
+- If the role card lists reference images under `assets/characters/<role-id>/`, include those paths in the prompt as loose visual guidance.
 - Preserve only the role's key identity markers, such as hair, glasses, clothing, posture, or signature props.
 - The narrator may appear as an observer, operator, confused participant, explainer, or person being overwhelmed by the article topic.
 - Do not force the narrator into every image. Use them only when they improve the scene.
@@ -104,6 +105,7 @@ Article beat: <the section, subsection, or argument this supports>
 Aspect ratio: 16:9
 Character mode: none OR narrator
 Narrator role: <role-id and pasted key markers from the selected role card, or "No recurring narrator">
+Reference images: <bundled role image paths if any, used only as loose guidance>
 Imagined reference picture: <what a normal article image/photo/poster for this beat would roughly show>
 Failed redraw scene: <one complete concrete scene, not a diagram>
 Subject and action: <main subjects, expressions, physical action, and what looks wrong>

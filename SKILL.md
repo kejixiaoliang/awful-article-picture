@@ -1,6 +1,6 @@
 ---
 name: awful-article-picture
-description: "Use when creating article illustrations, 给文章配图, making section-by-section article pictures, or redrawing article/reference ideas as low-quality, awkward, clumsy, white-background, pixel-ish, almost-but-not-quite MS Paint scenes. Especially use for AI, GitHub, coding, software, product, tutorial-like, or concept-heavy articles that might otherwise become diagrams, flowcharts, UI maps, timelines, screenshots, or label-heavy explainers."
+description: "Use when creating article illustrations, 给文章配图, making section-by-section article pictures, using optional narrator characters, or redrawing article/reference ideas as low-quality, awkward, clumsy, white-background, pixel-ish, almost-but-not-quite MS Paint scenes. Especially use for AI, GitHub, coding, software, product, tutorial-like, or concept-heavy articles that might otherwise become diagrams, flowcharts, UI maps, timelines, screenshots, or label-heavy explainers."
 ---
 
 # Awful Article Picture
@@ -11,6 +11,8 @@ Read [references/style.md](references/style.md) before creating prompts. Use the
 
 For software, AI, GitHub, coding, product, or tutorial-like articles, also read [references/prompt_examples.md](references/prompt_examples.md) before planning. These topics easily collapse into diagrams, so use the examples as guardrails.
 
+Read [references/characters.md](references/characters.md) whenever the user mentions a role, narrator, IP character, author avatar, mascot-like figure, or says "角色1", "角色2", `role-01`, or `role-02`.
+
 ## Default Behavior
 
 - Read the full article before planning images.
@@ -20,6 +22,7 @@ For software, AI, GitHub, coding, product, or tutorial-like articles, also read 
 - Deliver generated images and a `prompts.md` file when working in a project folder.
 - Keep the style consistent across one article unless the user asks for variants.
 - The picture must work as article配图, not as a tutorial diagram, UI map, flowchart, icon set, or label board. A good result is a funny failed redraw of a concrete scene tied to one article idea.
+- Default to character mode `none`: no recurring protagonist, no repeated blue-shirt little person, and no fixed face/hair/outfit across the full article unless the user selects a narrator role.
 
 ## Image Count
 
@@ -36,14 +39,35 @@ Reduce the count when sections repeat the same idea. Increase the count when a s
 
 1. Identify an article slug from the title or main topic.
 2. Create a concise image plan before generation when producing more than two images.
-3. For each image, record:
+3. Determine character mode:
+   - `none` by default.
+   - `narrator` only when the user explicitly asks for a fixed narrator / author avatar / role card.
+   - Map "角色1" to `role-01` and "角色2" to `role-02`.
+4. For each image, record:
    - image number and filename slug
    - article section or beat
    - concrete scene
    - aspect ratio (`16:9` by default)
+   - character mode and role id if any
    - whether it contains short text
-4. Make each image a distinct visual idea. Avoid repeating the same person-at-desk, abstract chart, or generic icon scene.
-5. If the article includes screenshots, diagrams, or reference-image descriptions, treat generated images as supplemental article illustrations unless the user asks for replacement drawings.
+5. Make each image a distinct visual idea. Avoid repeating the same person-at-desk, abstract chart, or generic icon scene.
+6. If the article includes screenshots, diagrams, or reference-image descriptions, treat generated images as supplemental article illustrations unless the user asks for replacement drawings.
+
+## Character Modes
+
+Use only these two modes:
+
+- `none`: Default. No fixed narrator or recurring protagonist. Use different people, objects, or no person at all depending on the scene. Do not keep reusing a blue-shirt man, the same hairstyle, the same face, or the same outfit across the set.
+- `narrator`: Use one selected role card as a recurring article narrator, observer, author avatar, or scene participant. The user may select `role-01`, `role-02`, "角色1", or "角色2".
+
+Narrator rules:
+
+- Load the selected role card from `references/character-library/<role-id>.md`.
+- Preserve only the role's key identity markers, such as hair, glasses, clothing, posture, or signature props.
+- The narrator may appear as an observer, operator, confused participant, explainer, or person being overwhelmed by the article topic.
+- Do not force the narrator into every image. Use them only when they improve the scene.
+- Keep the narrator ugly, mouse-drawn, inconsistent, and subordinate to the failed-redraw style. Do not turn them into a polished character sheet.
+- If a user provides their own role card or reference image, use it only if it appears to be original, owned by the user, or clearly authorized. Do not imitate protected existing characters, living artists, animation studios, or branded mascots without authorization.
 
 ## Scene Conversion Ladder
 
@@ -78,10 +102,13 @@ Use case: article illustration
 Asset type: failed MS Paint redraw of an imagined reference picture
 Article beat: <the section, subsection, or argument this supports>
 Aspect ratio: 16:9
+Character mode: none OR narrator
+Narrator role: <role-id and pasted key markers from the selected role card, or "No recurring narrator">
 Imagined reference picture: <what a normal article image/photo/poster for this beat would roughly show>
 Failed redraw scene: <one complete concrete scene, not a diagram>
 Subject and action: <main subjects, expressions, physical action, and what looks wrong>
 Scene props: <2-4 article-specific props integrated into the scene, not floating labels>
+Character placement: <where the narrator appears if useful, or "No fixed character; vary people naturally">
 Composition: <16:9 horizontal framing; scene occupies 45-65% of the canvas; white background remains visible>
 Text (verbatim): "<short exact text naturally placed on an object>" or "No text"
 Style layer: <paste the Bad MS Paint style layer from references/style.md>
@@ -101,6 +128,8 @@ Before generating, reject and rewrite a prompt if any of these are true:
 - It relies on a generic robot, generic cloud, generic box, generic chart, or generic stick person without article-specific props.
 - It uses words such as "diagram", "flowchart", "map", "timeline", "UI overview", "callouts", "infographic", "labels", "feature list", "minimal", "clean", "dense poster", or "crowded".
 - It describes tabs, menus, settings lists, page sections, commit history, branch arrows, or a product screen as the main visual instead of turning them into objects in a scene.
+- In `none` mode, it keeps reusing the same blue-shirt man, same face, same haircut, or same outfit as a hidden protagonist.
+- In `narrator` mode, it ignores the selected role's core identity markers or makes the narrator too polished.
 - It would look more like an icon than an illustration panel.
 - It would look like a software tutorial graphic, product UI map, or knowledge-card diagram.
 - It would be hard to understand quickly when embedded between article paragraphs.
@@ -145,6 +174,7 @@ Save `prompts.md` in the same folder with:
 
 - article title or source name
 - image plan
+- character mode and selected role card, if any
 - final prompt for each image
 - generated image path
 - notes about any regeneration or text corrections

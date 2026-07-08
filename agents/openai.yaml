@@ -1,7 +1,7 @@
 interface:
   display_name: "Awful Article Picture"
-  short_description: "Turns articles into failed-redraw MS Paint scenes"
-  default_prompt: "Use $awful-article-picture to split my article into 16:9 failed MS Paint redraw scenes, avoiding diagrams and label-heavy tutorial graphics."
+  short_description: "Turns articles into failed-redraw scenes with optional narrator roles"
+  default_prompt: "Use $awful-article-picture to split my article into 16:9 failed MS Paint redraw scenes. Use character mode none by default, or narrator role-01/role-02 when I ask."
 
 policy:
   allow_implicit_invocation: true

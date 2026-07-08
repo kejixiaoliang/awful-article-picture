@@ -1,0 +1,7 @@
+interface:
+  display_name: "Awful Article Picture"
+  short_description: "Turns articles into failed-redraw MS Paint scenes"
+  default_prompt: "Use $awful-article-picture to split my article into 16:9 failed MS Paint redraw scenes, avoiding diagrams and label-heavy tutorial graphics."
+
+policy:
+  allow_implicit_invocation: true

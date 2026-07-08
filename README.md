@@ -27,13 +27,13 @@
 - 中长文会拆成更多张图，而不是把所有信息塞进一张。
 - 每张图只保留一个主要想法和少量文章道具。
 - 风格目标是“失败临摹的文章配图”，不是“可爱精致插画”。
-- 默认角色模式是 `none`，不会反复使用固定蓝衣小亮。
+- 默认角色模式是 `none`，不会反复使用小亮或阿序。
 
 ## 自定义角色
 
 Skill 支持两种角色模式：
 
-- `none`：默认模式。没有固定主角，避免蓝衣小亮自动复现。
+- `none`：默认模式。没有固定主角，避免固定角色自动复现。
 - `narrator`：固定旁观 / 讲述角色，适合个人公众号作者形象。
 
 角色库位于：
@@ -46,9 +46,13 @@ assets/characters/role-01/
   xiaoliang-reference-01.png
   xiaoliang-reference-02.png
   xiaoliang-reference-03.png
+assets/characters/role-02/
+  axu-reference-01.png
 ```
 
-`role-01` 默认是“小亮”形象，并且以三张 PNG 参考图为准：黑色炸毛、蓝色上衣、圆眼睛、粗黑线条、白底彩色道具。用户可以替换 `role-01.md`、`role-02.md` 或对应图片为自己的原创 / 授权角色。
+`role-01` 默认是“小亮”形象，并且以三张 PNG 参考图为准：黑色炸毛、蓝色上衣、圆眼睛、粗黑线条、白底彩色道具。
+
+`role-02` 默认是“阿序”形象，并且以一张 PNG 设定图为准：圆框眼镜、深蓝 hoodie、白色抽绳、灰裤子、白鞋、探索日志、电脑、笔、咖啡、放大镜、灯泡等探索者道具。
 
 使用时可以说：
 
@@ -59,16 +63,16 @@ assets/characters/role-01/
 或：
 
 ```text
-用 awful-article-picture 给这篇文章配图，使用 narrator role-01。
+用 awful-article-picture 给这篇文章配图，使用 narrator role-02。
 ```
 
 中文也可以说：
 
 ```text
-这次用角色1。
+这次用角色2 / 阿序。
 ```
 
-固定角色只保留核心识别点，仍然要服从烂鼠绘失败临摹风格。
+固定角色只保留核心识别点，仍然要服从烂鼠绘失败临摹风格。阿序的设定图是角色身份参考，不是最终画风目标。
 
 ## 使用方式
 
@@ -103,6 +107,7 @@ references/character-library/role-02.md
 assets/characters/role-01/xiaoliang-reference-01.png
 assets/characters/role-01/xiaoliang-reference-02.png
 assets/characters/role-01/xiaoliang-reference-03.png
+assets/characters/role-02/axu-reference-01.png
 references/style.md
 references/prompt_examples.md
 ```
@@ -134,13 +139,13 @@ It is not meant to create clean infographics, tutorial flowcharts, UI maps, or l
 - Produces more images for longer articles instead of overloading one panel.
 - Keeps each image focused on one main idea with only a few article-specific props.
 - Optimizes for a failed-redraw look, not polished cute illustration.
-- Defaults to character mode `none`, so the blue-shirt Xiaoliang narrator is not reused unless selected.
+- Defaults to character mode `none`, so Xiaoliang or Axu is not reused unless selected.
 
 ## Custom Characters
 
 The skill supports two character modes:
 
-- `none`: default mode. No fixed protagonist; avoids repeating Xiaoliang automatically.
+- `none`: default mode. No fixed protagonist; avoids repeating narrator characters automatically.
 - `narrator`: a fixed observer / narrator / author avatar for personal publishing.
 
 The character library lives here:
@@ -153,9 +158,13 @@ assets/characters/role-01/
   xiaoliang-reference-01.png
   xiaoliang-reference-02.png
   xiaoliang-reference-03.png
+assets/characters/role-02/
+  axu-reference-01.png
 ```
 
-`role-01` is the bundled Xiaoliang narrator and uses the PNG reference images as the source of truth: black spiky hair, blue shirt, round eyes, thick black outlines, white background, and colorful article props. Users can replace `role-01.md`, `role-02.md`, or their corresponding reference images with their own original or authorized character card.
+`role-01` is the bundled Xiaoliang narrator and uses the PNG reference images as the source of truth: black spiky hair, blue shirt, round eyes, thick black outlines, white background, and colorful article props.
+
+`role-02` is the bundled Axu narrator and uses the PNG reference sheet as the source of truth: round glasses, dark navy hoodie, white drawstrings, gray pants, white shoes, exploration notebook, laptop, pen, coffee, magnifier, light bulb, and product-explorer props.
 
 Example usage:
 
@@ -166,10 +175,10 @@ Use $awful-article-picture to illustrate this article with character mode none.
 Or:
 
 ```text
-Use $awful-article-picture with narrator role-01.
+Use $awful-article-picture with narrator role-02.
 ```
 
-The fixed narrator preserves only key identity markers and still follows the awful MS Paint failed-redraw style.
+The fixed narrator preserves only key identity markers and still follows the awful MS Paint failed-redraw style. Axu's reference sheet defines identity, not the final polished style.
 
 ## Usage
 
@@ -198,6 +207,7 @@ references/character-library/role-02.md
 assets/characters/role-01/xiaoliang-reference-01.png
 assets/characters/role-01/xiaoliang-reference-02.png
 assets/characters/role-01/xiaoliang-reference-03.png
+assets/characters/role-02/axu-reference-01.png
 references/style.md
 references/prompt_examples.md
 ```

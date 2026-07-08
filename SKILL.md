@@ -11,7 +11,7 @@ Read [references/style.md](references/style.md) before creating prompts. Use the
 
 For software, AI, GitHub, coding, product, or tutorial-like articles, also read [references/prompt_examples.md](references/prompt_examples.md) before planning. These topics easily collapse into diagrams, so use the examples as guardrails.
 
-Read [references/characters.md](references/characters.md) whenever the user mentions a role, narrator, IP character, author avatar, mascot-like figure, or says "角色1", "角色2", `role-01`, or `role-02`.
+Read [references/characters.md](references/characters.md) whenever the user mentions a role, narrator, IP character, author avatar, mascot-like figure, or says "角色1", "角色2", "小亮", "阿序", `role-01`, or `role-02`.
 
 ## Default Behavior
 
@@ -22,7 +22,7 @@ Read [references/characters.md](references/characters.md) whenever the user ment
 - Deliver generated images and a `prompts.md` file when working in a project folder.
 - Keep the style consistent across one article unless the user asks for variants.
 - The picture must work as article配图, not as a tutorial diagram, UI map, flowchart, icon set, or label board. A good result is a funny failed redraw of a concrete scene tied to one article idea.
-- Default to character mode `none`: no recurring protagonist, no repeated blue-shirt little person, and no fixed face/hair/outfit across the full article unless the user selects a narrator role.
+- Default to character mode `none`: no recurring protagonist, no repeated Xiaoliang, no repeated Axu, and no fixed face/hair/outfit across the full article unless the user selects a narrator role.
 
 ## Image Count
 
@@ -42,7 +42,8 @@ Reduce the count when sections repeat the same idea. Increase the count when a s
 3. Determine character mode:
    - `none` by default.
    - `narrator` only when the user explicitly asks for a fixed narrator / author avatar / role card.
-   - Map "角色1" to `role-01` and "角色2" to `role-02`.
+   - Map "角色1" / "小亮" / "Xiaoliang" to `role-01`.
+   - Map "角色2" / "阿序" / "Axu" to `role-02`.
 4. For each image, record:
    - image number and filename slug
    - article section or beat
@@ -57,14 +58,15 @@ Reduce the count when sections repeat the same idea. Increase the count when a s
 
 Use only these two modes:
 
-- `none`: Default. No fixed narrator or recurring protagonist. Use different people, objects, or no person at all depending on the scene. Do not keep reusing a blue-shirt man, the same hairstyle, the same face, or the same outfit across the set.
-- `narrator`: Use one selected role card as a recurring article narrator, observer, author avatar, or scene participant. The user may select `role-01`, `role-02`, "角色1", or "角色2".
+- `none`: Default. No fixed narrator or recurring protagonist. Use different people, objects, or no person at all depending on the scene. Do not keep reusing Xiaoliang, Axu, a blue-shirt person, a hoodie person, the same hairstyle, the same face, or the same outfit across the set.
+- `narrator`: Use one selected role card as a recurring article narrator, observer, author avatar, or scene participant. The user may select `role-01`, `role-02`, "角色1", "角色2", "小亮", or "阿序".
 
 Narrator rules:
 
 - Load the selected role card from `references/character-library/<role-id>.md`.
-- If the role card lists reference images under `assets/characters/<role-id>/`, include those paths in the prompt as loose visual guidance.
+- If the role card lists reference images under `assets/characters/<role-id>/`, include those paths in the prompt as identity guidance.
 - For `role-01`, use the bundled PNG images as the canonical Xiaoliang reference. Preserve the blue shirt, black spiky hair, round eyes, tan face, and rough black outline shown in those PNGs. Do not substitute glasses, black hoodie, dark jacket, or a different narrator design.
+- For `role-02`, use the bundled PNG image as the canonical Axu reference. Preserve the round glasses, dark navy hoodie with white drawstrings, messy black hair, calm curious expression, and exploration props. Do not substitute Xiaoliang, a bright blue shirt, a no-glasses face, or the clean character-sheet style from the reference.
 - Preserve only the role's key identity markers, such as hair, eyes, clothing, posture, color palette, or signature props.
 - The narrator may appear as an observer, operator, confused participant, explainer, or person being overwhelmed by the article topic.
 - Do not force the narrator into every image. Use them only when they improve the scene.
@@ -106,7 +108,7 @@ Article beat: <the section, subsection, or argument this supports>
 Aspect ratio: 16:9
 Character mode: none OR narrator
 Narrator role: <role-id and pasted key markers from the selected role card, or "No recurring narrator">
-Reference images: <bundled role image paths if any, used only as loose guidance>
+Reference images: <bundled role image paths if any, used as identity guidance only>
 Imagined reference picture: <what a normal article image/photo/poster for this beat would roughly show>
 Failed redraw scene: <one complete concrete scene, not a diagram>
 Subject and action: <main subjects, expressions, physical action, and what looks wrong>
@@ -115,7 +117,7 @@ Character placement: <where the narrator appears if useful, or "No fixed charact
 Composition: <16:9 horizontal framing; scene occupies 45-65% of the canvas; white background remains visible>
 Text (verbatim): "<short exact text naturally placed on an object>" or "No text"
 Style layer: <paste the Bad MS Paint style layer from references/style.md>
-Constraints: white background, no watermark, no logo, no signature, no polished illustration finish, no tutorial diagram, no flowchart, no UI map, no floating label board, no web-app screenshot recreation.
+Constraints: white background, no watermark, no logo, no signature, no polished illustration finish, no clean character sheet, no tutorial diagram, no flowchart, no UI map, no floating label board, no web-app screenshot recreation.
 ```
 
 Translate abstract arguments into failed-redraw scenes. One image should have one primary idea and only a few props that make it recognizable.
@@ -131,7 +133,7 @@ Before generating, reject and rewrite a prompt if any of these are true:
 - It relies on a generic robot, generic cloud, generic box, generic chart, or generic stick person without article-specific props.
 - It uses words such as "diagram", "flowchart", "map", "timeline", "UI overview", "callouts", "infographic", "labels", "feature list", "minimal", "clean", "dense poster", or "crowded".
 - It describes tabs, menus, settings lists, page sections, commit history, branch arrows, or a product screen as the main visual instead of turning them into objects in a scene.
-- In `none` mode, it keeps reusing the same blue-shirt man, same face, same haircut, or same outfit as a hidden protagonist.
+- In `none` mode, it keeps reusing Xiaoliang, Axu, the same blue-shirt person, the same hoodie person, same face, same haircut, or same outfit as a hidden protagonist.
 - In `narrator` mode, it ignores the selected role's core identity markers or makes the narrator too polished.
 - It would look more like an icon than an illustration panel.
 - It would look like a software tutorial graphic, product UI map, or knowledge-card diagram.

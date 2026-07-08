@@ -9,16 +9,16 @@ Default mode. Use this when the user does not ask for a recurring role, author a
 Rules:
 
 - Do not use a fixed protagonist.
-- Do not repeatedly generate the same blue-shirt little person.
+- Do not repeatedly generate Xiaoliang, Axu, the same blue-shirt person, or the same hoodie person.
 - Do not preserve the same face, hair, clothes, or body type across the whole article.
-- Let each scene decide whether it needs a person, object, room, animal-free prop, machine, desk, or no living character at all.
+- Let each scene decide whether it needs a person, object, room, machine, desk, or no living character at all.
 - If people appear, vary them naturally and redraw them badly.
 
 Prompt line:
 
 ```text
 Character mode: none
-Narrator role: No recurring narrator. Do not reuse the same blue-shirt character, face, hairstyle, or outfit across images.
+Narrator role: No recurring narrator. Do not reuse Xiaoliang, Axu, the same blue-shirt character, the same hoodie character, face, hairstyle, or outfit across images.
 Character placement: No fixed character; vary people naturally and omit people when the scene works without them.
 ```
 
@@ -28,22 +28,23 @@ Use this only when the user explicitly selects a fixed narrator / author avatar 
 
 Supported role ids:
 
-- `role-01`, also called `角色1`
-- `role-02`, also called `角色2`
+- `role-01`, also called `角色1` / `小亮` / `Xiaoliang`
+- `role-02`, also called `角色2` / `阿序` / `Axu`
 
 Load the selected file from `references/character-library/`.
 
-If the role card lists bundled reference images under `assets/characters/<role-id>/`, use them as loose identity guidance. Preserve only the core markers; do not trace the images exactly.
+If the role card lists bundled reference images under `assets/characters/<role-id>/`, use them as identity guidance. Preserve the core markers; do not trace the images exactly.
 
 Rules:
 
 - Preserve only the core identity markers from the role card.
 - For role-01, the bundled PNG files are canonical. Use the blue-shirt, black-spiky-hair Xiaoliang from those PNGs, not a newly invented narrator design.
+- For role-02, the bundled PNG file is canonical. Use the round-glasses, dark-navy-hoodie Axu from that PNG, not Xiaoliang and not a polished character-sheet style.
 - The narrator can be a viewer, operator, confused participant, author avatar, or person being overwhelmed by the article topic.
 - The narrator does not need to appear in every image.
 - The narrator must remain in the awful MS Paint failed-redraw style.
 - Do not make the narrator cute, polished, consistent like a model sheet, or more important than the article scene.
-- Do not silently reuse a narrator in `none` mode. The blue-shirt Xiaoliang is allowed only when narrator role-01 is selected.
+- Do not silently reuse a narrator in `none` mode. Xiaoliang is allowed only when narrator role-01 is selected; Axu is allowed only when narrator role-02 is selected.
 
 Prompt line:
 
